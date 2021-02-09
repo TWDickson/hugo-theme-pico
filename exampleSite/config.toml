@@ -1,3 +1,5 @@
+# Use an empty string if you have multiple domain linking to your website
+# This string is used to generate the absolute URL for your assets.
 baseURL = 'https://example.com/'
 defaultContentLanguage = 'en'
 # Emoji in markdown files
@@ -21,7 +23,13 @@ customJS = ["js/console.js"] # Path relative to assets folder
 # in the front matter
 description = "Boilerplate website"
 email = "mail@example.com"
-favicon = '/favicon.png'
+favicon = '/favicon.ico'
+# Dark mode support
+# Supported value are :
+# - off
+# - always
+# If commented the theme will use the browser theme.
+# darkMode = 'always'
 
 # Social parameters for contact_icons widget
 [[params.social]]

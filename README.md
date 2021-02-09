@@ -6,21 +6,23 @@
 	<a href="https://github.com/negrel/ginger/raw/master/LICENSE">
 		<img src="https://img.shields.io/badge/license-MIT-green">
 	</a>
+<a href="https://app.fossa.com/projects/git%2Bgithub.com%2Fnegrel%2Fhugo-theme-pico?ref=badge_shield" alt="FOSSA Status"><img src="https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnegrel%2Fhugo-theme-pico.svg?type=shield"/></a>
 </p>
 
-This theme aims to be minimalist, readable, responsive, light and beautiful. Inspired by **Medium** and **The New York Times**, Pico try to provide the best experience for the reader while having an awesome design. It can be configured as a single page, or as a full-featured site with multiple sections. It is multilingual, responsive, and includes a light and *dark theme* (*soon*).
+This theme aims to be minimalist, readable, responsive, light and beautiful. Inspired by **Medium** and **The New York Times**, Pico try to provide the best experience for the reader while having an awesome design. It can be configured as a single page, or as a full-featured site with multiple sections. It is multilingual, responsive, and includes a light and *dark theme*.
 
 You can check the [**example site**](https://sponge-bob.netlify.app/).
 ![pico example screenshot](https://github.com/negrel/hugo-theme-pico/raw/master/.github/banner.jpg)
 
 Features :
 - Multilingual - supports side-by-side content in different language versions
-- Syntax highlighting (one dark theme)
+- Syntax highlighting ("one dark" theme)
 - Styled Markdown throughout, including post titles
 - Customizable pages with widget or [TailwindCSS](https://tailwindcss.com/)
 - Straightforward customization via config.toml
 - Projects and Blog sections
 - Light, CSS bundle is purged and minified thanks to PostCSS
+- Light & Dark theme
 
 Developer-friendly :
 - Sass files included with instant compiling to CSS thanks to Hugo Pipes and PostCSS
@@ -56,6 +58,7 @@ Learn how to install and use npm [here](https://www.npmjs.com/get-npm).
 git clone https://github.com/negrel/hugo-theme-pico.git pico
 
 # Copy the example site
+mkdir my_website
 cp -r pico/exampleSite/* my_website
 
 # You can delete the cloned repository
@@ -100,3 +103,6 @@ Please give a :star: if this project helped you!
 
 #### :scroll: License
 MIT © [Alexandre Negrel](https://www.negrel.dev)
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnegrel%2Fhugo-theme-pico.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnegrel%2Fhugo-theme-pico?ref=badge_large)
