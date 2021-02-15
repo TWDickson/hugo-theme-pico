@@ -31,6 +31,9 @@ other = "Retour"
 [contact]
 other = "Contact"
 
+[resume]
+other = "Résumé"
+
 [contact_email]
 other = "Contacter via email"
 
