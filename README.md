@@ -11,6 +11,17 @@ It's useful to have some idea how tailwind css works.
 
 Of PICO's SASS files the only useful one is [_variables.scss](assets/sass/_variables.scss) where the theme colouring is defined. Others seem to be various template controls though I am not sure.
 
+### Colours
+
+Defining colours has been problematic. PICO uses a "class" [dark mode toggle](https://tailwindcss.com/docs/dark-mode#toggling-dark-mode-manually). This means that colours can be defined using something like so:
+
+```html
+<div class="some classes dark: border-pink-600">
+```
+
+Theme colours are defined in two places:
+[tailwind.config.js](/themes/pico/assets/config/tailwind.config.js) and [_variables.scss](assets/sass/_variables.scss).
+
 ## Site Structure
 
 The home page and barely has any logic in it's template file, [index.html](layouts/index.html) simply calls the widgets:

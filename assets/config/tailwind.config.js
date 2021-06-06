@@ -72,7 +72,11 @@ module.exports = {
 
         accent: 'var(--color-accent)',
         'accent-dark': 'var(--color-accent-dark)',
-        'accent-light': 'var(--color-accent-light)'
+        'accent-light': 'var(--color-accent-light)',
+        
+        edge: 'var(--color-edge)',
+        'edge-dark': 'var(--color-edge-dark)',
+        'edge-light': 'var(--color-edge-light)'
       }
     },
     boxShadow: {

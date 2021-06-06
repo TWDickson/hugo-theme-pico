@@ -12,39 +12,41 @@
 
 	<div class="relative">
 		{{/* Timeline bar */}}
-		<div class="h-full border-l border-black absolute left-0 md:absolute-center"></div>
+		<div class="h-full border-l-2 dark:border-edge absolute left-0 md:absolute-center"></div>
 		<div>
 			{{ range $index, $period := .Params.period }}
 			{{ $even := modBool $index 2 }}
-
-			{{ $containerClass := "md:mr-auto pl-4 md:pl-0 md:pr-4"}}
-			{{ $dateClass := "md:text-right font-thin text-grey-800 text-xl" }}
+			{{/*  Left Side  */}}
+			{{ $containerClass := "md:ml-auto pl-4 md:pr-0 md:pl-4"}}
+			{{ $dateClass := "font-medium" }}
 
 			{{ if $even }}
-			{{ $containerClass = "md:ml-auto pl-4"}}
-			{{ $dateClass = "font-thin text-grey-800 text-xl" }}
+			{{/*  Right Side  */}}
+			{{/*  {{ $containerClass = "md:ml-auto pl-4"}}  */}}
+			{{ $containerClass = "md:mr-auto pr-4"}}
 			{{ end }}
 
 
 			<div class="md:w-1/2 mb-6 {{ $containerClass }}">
-				<div class="p-4 border border-black rounded-md transition ease-in-out duration-300 shadow-2 hover:shadow-8 ">
-					<h2 class="inline-block my-0 text-grey-800">{{ .title | markdownify }}</h2>
-					<h3 class="mt-1 mb-0 text-grey-700">{{ .subtitle | markdownify }}</h3>
+				<div class="p-4 border dark:border-pink-600 border-black rounded-md transition ease-in-out duration-300 shadow-2 hover:shadow-8 ">
+					<h2 class="my-1 font-black">{{ .title | markdownify }}</h2>
+					<h3 class="my-0.5 font-bold">{{ .subtitle | markdownify }}</h3>
 					
-					<div class="mb-4 {{ $dateClass }}">{{ $period.date_start | dateFormat $dateFormat }} &mdash; 
+					<h4 class="{{ $dateClass }}">{{ $period.date_start | dateFormat $dateFormat }} &mdash; 
 						{{ if eq $period.date_end "" }}
 							{{ i18n "present" }}
 						{{else}}
 							{{ $period.date_end | dateFormat $dateFormat }}
 						{{end}}
-					</div>
+					</h4>
 
 					{{ with .location }}
-					<span class="mx-2">{{ . }}</span>
+					<h5 class="font-normal">{{ . }}</h5>
 					{{ end }}
 
+
 					{{ with .description }}
-					<div class="mb-2 text-grey-800">
+					<div class="mb-2">
 						<p>{{ . | markdownify }}</p>
 					</div>
 					{{ end }}
